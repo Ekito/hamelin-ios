@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A90417B618ED5A6800F3BD5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B518ED5A6800F3BD5B /* Foundation.framework */; };
+		A90417B818ED5A6800F3BD5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B718ED5A6800F3BD5B /* CoreGraphics.framework */; };
+		A90417BA18ED5A6800F3BD5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B918ED5A6800F3BD5B /* UIKit.framework */; };
+		A90417C018ED5A6800F3BD5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A90417BE18ED5A6800F3BD5B /* InfoPlist.strings */; };
+		A90417C218ED5A6800F3BD5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A90417C118ED5A6800F3BD5B /* main.m */; };
+		A90417C618ED5A6800F3BD5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A90417C518ED5A6800F3BD5B /* AppDelegate.m */; };
+		A90417C918ED5A6800F3BD5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90417C718ED5A6800F3BD5B /* Main.storyboard */; };
+		A90417CC18ED5A6800F3BD5B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90417CB18ED5A6800F3BD5B /* ViewController.m */; };
+		A90417CE18ED5A6800F3BD5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90417CD18ED5A6800F3BD5B /* Images.xcassets */; };
+		A90417D518ED5A6900F3BD5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417D418ED5A6900F3BD5B /* XCTest.framework */; };
+		A90417D618ED5A6900F3BD5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B518ED5A6800F3BD5B /* Foundation.framework */; };
+		A90417D718ED5A6900F3BD5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B918ED5A6800F3BD5B /* UIKit.framework */; };
+		A90417DF18ED5A6900F3BD5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A90417DD18ED5A6900F3BD5B /* InfoPlist.strings */; };
+		A90417E118ED5A6900F3BD5B /* HamelinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A90417E018ED5A6900F3BD5B /* HamelinTests.m */; };
+		A90417ED18ED62E100F3BD5B /* wifi_symbol.png in Resources */ = {isa = PBXBuildFile; fileRef = A90417EB18ED62E100F3BD5B /* wifi_symbol.png */; };
+		A90417EE18ED62E100F3BD5B /* wifi_symbol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A90417EC18ED62E100F3BD5B /* wifi_symbol@2x.png */; };
+		D6402EFC0AE4415CB7571899 /* libPods-Hamelin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5FF34F04A84BBEA2E93D41 /* libPods-Hamelin.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A90417D818ED5A6900F3BD5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A90417AA18ED5A6800F3BD5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A90417B118ED5A6800F3BD5B;
+			remoteInfo = Hamelin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E5FF34F04A84BBEA2E93D41 /* libPods-Hamelin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hamelin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17F6E4A5BA07458884A085AC /* Pods-Hamelin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hamelin.xcconfig"; path = "Pods/Pods-Hamelin.xcconfig"; sourceTree = "<group>"; };
+		A90417B218ED5A6800F3BD5B /* Hamelin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamelin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90417B518ED5A6800F3BD5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A90417B718ED5A6800F3BD5B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A90417B918ED5A6800F3BD5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A90417BD18ED5A6800F3BD5B /* Hamelin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hamelin-Info.plist"; sourceTree = "<group>"; };
+		A90417BF18ED5A6800F3BD5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A90417C118ED5A6800F3BD5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A90417C318ED5A6800F3BD5B /* Hamelin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hamelin-Prefix.pch"; sourceTree = "<group>"; };
+		A90417C418ED5A6800F3BD5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A90417C518ED5A6800F3BD5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A90417C818ED5A6800F3BD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A90417CA18ED5A6800F3BD5B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A90417CB18ED5A6800F3BD5B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A90417CD18ED5A6800F3BD5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A90417D318ED5A6900F3BD5B /* HamelinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HamelinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90417D418ED5A6900F3BD5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A90417DC18ED5A6900F3BD5B /* HamelinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HamelinTests-Info.plist"; sourceTree = "<group>"; };
+		A90417DE18ED5A6900F3BD5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A90417E018ED5A6900F3BD5B /* HamelinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HamelinTests.m; sourceTree = "<group>"; };
+		A90417EB18ED62E100F3BD5B /* wifi_symbol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wifi_symbol.png; sourceTree = "<group>"; };
+		A90417EC18ED62E100F3BD5B /* wifi_symbol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi_symbol@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A90417AF18ED5A6800F3BD5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90417B818ED5A6800F3BD5B /* CoreGraphics.framework in Frameworks */,
+				A90417BA18ED5A6800F3BD5B /* UIKit.framework in Frameworks */,
+				A90417B618ED5A6800F3BD5B /* Foundation.framework in Frameworks */,
+				D6402EFC0AE4415CB7571899 /* libPods-Hamelin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90417D018ED5A6900F3BD5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90417D518ED5A6900F3BD5B /* XCTest.framework in Frameworks */,
+				A90417D718ED5A6900F3BD5B /* UIKit.framework in Frameworks */,
+				A90417D618ED5A6900F3BD5B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A90417A918ED5A6800F3BD5B = {
+			isa = PBXGroup;
+			children = (
+				A90417BB18ED5A6800F3BD5B /* Hamelin */,
+				A90417DA18ED5A6900F3BD5B /* HamelinTests */,
+				A90417B418ED5A6800F3BD5B /* Frameworks */,
+				A90417B318ED5A6800F3BD5B /* Products */,
+				17F6E4A5BA07458884A085AC /* Pods-Hamelin.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A90417B318ED5A6800F3BD5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A90417B218ED5A6800F3BD5B /* Hamelin.app */,
+				A90417D318ED5A6900F3BD5B /* HamelinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A90417B418ED5A6800F3BD5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A90417B518ED5A6800F3BD5B /* Foundation.framework */,
+				A90417B718ED5A6800F3BD5B /* CoreGraphics.framework */,
+				A90417B918ED5A6800F3BD5B /* UIKit.framework */,
+				A90417D418ED5A6900F3BD5B /* XCTest.framework */,
+				0E5FF34F04A84BBEA2E93D41 /* libPods-Hamelin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A90417BB18ED5A6800F3BD5B /* Hamelin */ = {
+			isa = PBXGroup;
+			children = (
+				A90417C418ED5A6800F3BD5B /* AppDelegate.h */,
+				A90417C518ED5A6800F3BD5B /* AppDelegate.m */,
+				A90417C718ED5A6800F3BD5B /* Main.storyboard */,
+				A90417CA18ED5A6800F3BD5B /* ViewController.h */,
+				A90417CB18ED5A6800F3BD5B /* ViewController.m */,
+				A90417CD18ED5A6800F3BD5B /* Images.xcassets */,
+				A90417BC18ED5A6800F3BD5B /* Supporting Files */,
+			);
+			path = Hamelin;
+			sourceTree = "<group>";
+		};
+		A90417BC18ED5A6800F3BD5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A90417EA18ED62E100F3BD5B /* images */,
+				A90417BD18ED5A6800F3BD5B /* Hamelin-Info.plist */,
+				A90417BE18ED5A6800F3BD5B /* InfoPlist.strings */,
+				A90417C118ED5A6800F3BD5B /* main.m */,
+				A90417C318ED5A6800F3BD5B /* Hamelin-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A90417DA18ED5A6900F3BD5B /* HamelinTests */ = {
+			isa = PBXGroup;
+			children = (
+				A90417E018ED5A6900F3BD5B /* HamelinTests.m */,
+				A90417DB18ED5A6900F3BD5B /* Supporting Files */,
+			);
+			path = HamelinTests;
+			sourceTree = "<group>";
+		};
+		A90417DB18ED5A6900F3BD5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A90417DC18ED5A6900F3BD5B /* HamelinTests-Info.plist */,
+				A90417DD18ED5A6900F3BD5B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A90417EA18ED62E100F3BD5B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A90417EB18ED62E100F3BD5B /* wifi_symbol.png */,
+				A90417EC18ED62E100F3BD5B /* wifi_symbol@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A90417B118ED5A6800F3BD5B /* Hamelin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90417E418ED5A6900F3BD5B /* Build configuration list for PBXNativeTarget "Hamelin" */;
+			buildPhases = (
+				968546C583314633824E2AE3 /* Check Pods Manifest.lock */,
+				A90417AE18ED5A6800F3BD5B /* Sources */,
+				A90417AF18ED5A6800F3BD5B /* Frameworks */,
+				A90417B018ED5A6800F3BD5B /* Resources */,
+				F21213C3FC4F4AB5BA24260D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hamelin;
+			productName = Hamelin;
+			productReference = A90417B218ED5A6800F3BD5B /* Hamelin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A90417D218ED5A6900F3BD5B /* HamelinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90417E718ED5A6900F3BD5B /* Build configuration list for PBXNativeTarget "HamelinTests" */;
+			buildPhases = (
+				A90417CF18ED5A6900F3BD5B /* Sources */,
+				A90417D018ED5A6900F3BD5B /* Frameworks */,
+				A90417D118ED5A6900F3BD5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A90417D918ED5A6900F3BD5B /* PBXTargetDependency */,
+			);
+			name = HamelinTests;
+			productName = HamelinTests;
+			productReference = A90417D318ED5A6900F3BD5B /* HamelinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A90417AA18ED5A6800F3BD5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ekito;
+				TargetAttributes = {
+					A90417D218ED5A6900F3BD5B = {
+						TestTargetID = A90417B118ED5A6800F3BD5B;
+					};
+				};
+			};
+			buildConfigurationList = A90417AD18ED5A6800F3BD5B /* Build configuration list for PBXProject "Hamelin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A90417A918ED5A6800F3BD5B;
+			productRefGroup = A90417B318ED5A6800F3BD5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A90417B118ED5A6800F3BD5B /* Hamelin */,
+				A90417D218ED5A6900F3BD5B /* HamelinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A90417B018ED5A6800F3BD5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90417CE18ED5A6800F3BD5B /* Images.xcassets in Resources */,
+				A90417C018ED5A6800F3BD5B /* InfoPlist.strings in Resources */,
+				A90417EE18ED62E100F3BD5B /* wifi_symbol@2x.png in Resources */,
+				A90417ED18ED62E100F3BD5B /* wifi_symbol.png in Resources */,
+				A90417C918ED5A6800F3BD5B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90417D118ED5A6900F3BD5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90417DF18ED5A6900F3BD5B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		968546C583314633824E2AE3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F21213C3FC4F4AB5BA24260D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Hamelin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A90417AE18ED5A6800F3BD5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90417CC18ED5A6800F3BD5B /* ViewController.m in Sources */,
+				A90417C618ED5A6800F3BD5B /* AppDelegate.m in Sources */,
+				A90417C218ED5A6800F3BD5B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A90417CF18ED5A6900F3BD5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90417E118ED5A6900F3BD5B /* HamelinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A90417D918ED5A6900F3BD5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A90417B118ED5A6800F3BD5B /* Hamelin */;
+			targetProxy = A90417D818ED5A6900F3BD5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A90417BE18ED5A6800F3BD5B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A90417BF18ED5A6800F3BD5B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A90417C718ED5A6800F3BD5B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A90417C818ED5A6800F3BD5B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A90417DD18ED5A6900F3BD5B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A90417DE18ED5A6900F3BD5B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A90417E218ED5A6900F3BD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Montagne (4924LEU8HF)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A90417E318ED5A6900F3BD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Montagne (4924LEU8HF)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A90417E518ED5A6900F3BD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17F6E4A5BA07458884A085AC /* Pods-Hamelin.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hamelin/Hamelin-Prefix.pch";
+				INFOPLIST_FILE = "Hamelin/Hamelin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A90417E618ED5A6900F3BD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17F6E4A5BA07458884A085AC /* Pods-Hamelin.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hamelin/Hamelin-Prefix.pch";
+				INFOPLIST_FILE = "Hamelin/Hamelin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A90417E818ED5A6900F3BD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hamelin.app/Hamelin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hamelin/Hamelin-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HamelinTests/HamelinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A90417E918ED5A6900F3BD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hamelin.app/Hamelin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hamelin/Hamelin-Prefix.pch";
+				INFOPLIST_FILE = "HamelinTests/HamelinTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A90417AD18ED5A6800F3BD5B /* Build configuration list for PBXProject "Hamelin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90417E218ED5A6900F3BD5B /* Debug */,
+				A90417E318ED5A6900F3BD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90417E418ED5A6900F3BD5B /* Build configuration list for PBXNativeTarget "Hamelin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90417E518ED5A6900F3BD5B /* Debug */,
+				A90417E618ED5A6900F3BD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90417E718ED5A6900F3BD5B /* Build configuration list for PBXNativeTarget "HamelinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90417E818ED5A6900F3BD5B /* Debug */,
+				A90417E918ED5A6900F3BD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A90417AA18ED5A6800F3BD5B /* Project object */;
+}

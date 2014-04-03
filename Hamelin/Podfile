@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, "7.0"
+
+target "Hamelin" do
+
+  pod 'AFNetworking', "~> 2.0" # A delightful iOS and OS X networking framework.
+  
+end
+
+target "HamelinTests" do
+
+end
+

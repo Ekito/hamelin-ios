@@ -41,6 +41,7 @@
         
         if (! [responseObject isKindOfClass:NSDictionary.class]) {
             NSLog(@"Expecting a dictionary in json object ; aborting");
+            [self retryFetchURLLater];
             return;
         }
      
@@ -50,6 +51,8 @@
         
         if (! [dictionaryObject valueForKey:@"url"]) {
             NSLog(@"No url value in dictionary received ; aborting");
+            [self retryFetchURLLater];
+
             return;
         }
         
@@ -59,12 +62,18 @@
     }
                                      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                          NSLog(@"Could not fetch url. Error: %@", error);
+                                         [self retryFetchURLLater];
                                      }];
     [operation start];
     
     
     
 }
+
+- (void) retryFetchURLLater {
+    [self performSelector:@selector(fetchURLOfWebViewFromRemoteJSONConfigFile) withObject:nil afterDelay:6.0f];
+}
+
 
 - (void)viewDidLoad
 {
@@ -85,7 +94,7 @@
 }
 
 - (void) configureUIBasedOnConnectivity {
-    NSLog(@"Configuring wifi view");
+//    NSLog(@"Configuring wifi view");
     
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 
@@ -96,7 +105,6 @@
             [self hideConnectToWifiView];
         } else {
             [self showConnectToWifiView];
-            // Not showing error label, because this can come after didFinishLoading
         }
         
     }];

@@ -58,6 +58,12 @@
         
         self.urlOfWebView = [NSURL URLWithString:[dictionaryObject valueForKey:@"url"]];
         
+        if (! self.urlOfWebView) {
+            NSLog(@"Fetched url is nil, this is unexpected ; aborting");
+            [self retryFetchURLLater];
+            return;
+        }
+        
         [self didReceiveURLOfWebView];
     }
                                      failure:^(AFHTTPRequestOperation *operation, NSError *error) {

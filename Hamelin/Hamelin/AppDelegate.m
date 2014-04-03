@@ -15,6 +15,8 @@
  
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
     return YES;
 }
 							

@@ -11,13 +11,15 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UIWebViewDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @property (strong) NSURL *urlOfWebView;
 @property (weak, nonatomic) IBOutlet UIView *connectToWifiView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinningWheel;
+@property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 
 @end
 
@@ -77,7 +79,7 @@
 }
 
 - (void) retryFetchURLLater {
-    [self performSelector:@selector(fetchURLOfWebViewFromRemoteJSONConfigFile) withObject:nil afterDelay:6.0f];
+    [self performSelector:@selector(fetchURLOfWebViewFromRemoteJSONConfigFile) withObject:nil afterDelay:3.0f];
 }
 
 
@@ -85,22 +87,28 @@
 {
     [super viewDidLoad];
     
-    
-    
-    [self fetchURLOfWebViewFromRemoteJSONConfigFile];
+    // Temporary disabled
+//    [self fetchURLOfWebViewFromRemoteJSONConfigFile];
 
 }
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    
+    NSLog(@"Hello");
     
     [self configureUIBasedOnConnectivity];
+    
+    //    instead:
+    NSString * const kURLOfWebPageToLoad = @"http://192.168.5.106:8080/mobile.html"; // @"http://www.google.fr"; // 
+    
+    self.urlOfWebView = [NSURL URLWithString:kURLOfWebPageToLoad];
+    [self didReceiveURLOfWebView];
 }
 
 - (void) configureUIBasedOnConnectivity {
-//    NSLog(@"Configuring wifi view");
+    NSLog(@"Currently disabled");
+    return;
     
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 
@@ -130,11 +138,53 @@
     }];
 }
 
+- (void) showLoadingComponents {
+    self.loadingLabel.hidden = NO;
+    self.loadingSpinningWheel.hidden = NO;
+    [self.loadingSpinningWheel startAnimating];
+}
+
+- (void) hideLoadingComponents {
+    self.loadingLabel.hidden = YES;
+    [self.loadingSpinningWheel startAnimating];
+    self.loadingSpinningWheel.hidden = YES;
+}
 
 
 
 - (void) didReceiveURLOfWebView {
+    [self showLoadingComponents];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.urlOfWebView]];
+}
+
+
+#pragma mark -
+#pragma mark UIWebViewDelegate
+
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    NSLog(@"Did start loading");
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self hideConnectToWifiView];
+}
+
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    
+    if ([error.domain isEqualToString:NSURLErrorDomain]
+        && error.code == NSURLErrorCannotConnectToHost) {
+        NSLog(@"Could not connect to host");
+    }
+
+    NSLog(@"Error: %@ - \n\n%@", error, [error description]);
+
+    [self hideLoadingComponents];
+    [self showConnectToWifiView];
+    [self retryFetchURLLater];
+
+
 }
 
 

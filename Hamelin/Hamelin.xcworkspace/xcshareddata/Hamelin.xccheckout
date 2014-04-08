@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AE45D702-C866-4084-A655-27C06DED1D98</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hamelin</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5FF8A4B7-7748-43CE-9569-0E2DC2262200</key>
+		<string>https://github.com/Ekito/hamelin-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hamelin/Hamelin.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5FF8A4B7-7748-43CE-9569-0E2DC2262200</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Ekito/hamelin-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5FF8A4B7-7748-43CE-9569-0E2DC2262200</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5FF8A4B7-7748-43CE-9569-0E2DC2262200</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hamelin-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

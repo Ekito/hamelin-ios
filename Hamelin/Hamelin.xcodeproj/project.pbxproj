@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BD21E641949CAF000F7D8F2 /* top_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD21E631949CAF000F7D8F2 /* top_logo.png */; };
 		A90417B618ED5A6800F3BD5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B518ED5A6800F3BD5B /* Foundation.framework */; };
 		A90417B818ED5A6800F3BD5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B718ED5A6800F3BD5B /* CoreGraphics.framework */; };
 		A90417BA18ED5A6800F3BD5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B918ED5A6800F3BD5B /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		0E5FF34F04A84BBEA2E93D41 /* libPods-Hamelin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hamelin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F6E4A5BA07458884A085AC /* Pods-Hamelin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hamelin.xcconfig"; path = "Pods/Pods-Hamelin.xcconfig"; sourceTree = "<group>"; };
+		3BD21E631949CAF000F7D8F2 /* top_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_logo.png; sourceTree = "<group>"; };
 		A90417B218ED5A6800F3BD5B /* Hamelin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamelin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90417B518ED5A6800F3BD5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A90417B718ED5A6800F3BD5B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,6 +168,7 @@
 		A90417EA18ED62E100F3BD5B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3BD21E631949CAF000F7D8F2 /* top_logo.png */,
 				A90417EB18ED62E100F3BD5B /* wifi_symbol.png */,
 				A90417EC18ED62E100F3BD5B /* wifi_symbol@2x.png */,
 			);
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD21E641949CAF000F7D8F2 /* top_logo.png in Resources */,
 				A90417CE18ED5A6800F3BD5B /* Images.xcassets in Resources */,
 				A90417C018ED5A6800F3BD5B /* InfoPlist.strings in Resources */,
 				A90417EE18ED62E100F3BD5B /* wifi_symbol@2x.png in Resources */,

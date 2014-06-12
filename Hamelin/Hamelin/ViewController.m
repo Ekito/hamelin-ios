@@ -18,8 +18,13 @@
 
 @property (strong) NSURL *urlOfWebView;
 @property (weak, nonatomic) IBOutlet UIView *connectToWifiView;
+@property (weak, nonatomic) IBOutlet UIView *connectedView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinningWheel;
 @property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
+@property (weak, nonatomic) IBOutlet UIButton *participeButton;
+@property (weak, nonatomic) IBOutlet UIButton *liveButton;
+
+@property (strong) AFNetworkReachabilityManager *reachManagerHeroku;
 
 @end
 
@@ -87,9 +92,7 @@
 {
     [super viewDidLoad];
     
-    // Temporary disabled
-//    [self fetchURLOfWebViewFromRemoteJSONConfigFile];
-
+    self.connectedView.alpha = 0.0f;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -98,31 +101,35 @@
     NSLog(@"Hello");
     
     [self configureUIBasedOnConnectivity];
-    
-    //    instead:
-    NSString * const kURLOfWebPageToLoad = @"http://192.168.5.106:8080/mobile.html"; // @"http://www.google.fr"; // 
-    
-    self.urlOfWebView = [NSURL URLWithString:kURLOfWebPageToLoad];
-    [self didReceiveURLOfWebView];
 }
 
 - (void) configureUIBasedOnConnectivity {
-    NSLog(@"Currently disabled");
-    return;
-    
-    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    self.reachManagerHeroku = [AFNetworkReachabilityManager managerForDomain:@"hamelin.herokuapp.com"];
 
+    __weak ViewController *weakSelf = self;
     
-    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        
-        if ([AFNetworkReachabilityManager sharedManager].isReachableViaWiFi ) {
-            [self hideConnectToWifiView];
+    [self.reachManagerHeroku setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        if (status == AFNetworkReachabilityStatusNotReachable || status == AFNetworkReachabilityStatusNotReachable) {
+            // On est pas connectable à Heroku - On essaye d'afficher la page Hamelin
+            NSLog(@"Non connectable Heroku");
+            [weakSelf.reachManagerHeroku stopMonitoring];
+            
+            NSString * const kURLOfWebPageToLoad = @"http://192.168.5.106:8080/mobile.html";
+            weakSelf.urlOfWebView = [NSURL URLWithString:kURLOfWebPageToLoad];
+            [weakSelf didReceiveURLOfWebView];
+            
         } else {
-            [self showConnectToWifiView];
+            // On est connectable à Heroku, on affiche la page Heroku
+            [weakSelf.reachManagerHeroku stopMonitoring];
+            NSLog(@"Connectable Heroku");
+
+            NSString * const kURLOfWebPageToLoad = @"http://hamelin.herokuapp.com/mobile-demo.html";
+            weakSelf.urlOfWebView = [NSURL URLWithString:kURLOfWebPageToLoad];
+            [weakSelf didReceiveURLOfWebView];
         }
-        
     }];
 
+    [self.reachManagerHeroku startMonitoring];
 }
 
 - (void) showConnectToWifiView {
@@ -138,9 +145,28 @@
     }];
 }
 
+- (void) showConnectedView {
+    [UIView animateWithDuration:0.5 animations:^{
+        self.connectedView.alpha = 1.0f;
+        if ([self.webView.request.URL.host isEqualToString:@"hamelin.herokuapp.com"]) {
+            self.liveButton.enabled = YES;
+        } else {
+            self.liveButton.enabled = NO;
+        }
+    }];
+}
+
+
+- (void) hideConnectedView {
+    [UIView animateWithDuration:0.5 animations:^{
+        self.connectedView.alpha = 0.0f;
+    }];
+}
+
 - (void) showLoadingComponents {
     self.loadingLabel.hidden = NO;
     self.loadingSpinningWheel.hidden = NO;
+    self.participeButton.hidden = YES;
     [self.loadingSpinningWheel startAnimating];
 }
 
@@ -148,6 +174,7 @@
     self.loadingLabel.hidden = YES;
     [self.loadingSpinningWheel startAnimating];
     self.loadingSpinningWheel.hidden = YES;
+    self.participeButton.hidden = NO;
 }
 
 
@@ -157,6 +184,13 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.urlOfWebView]];
 }
 
+- (IBAction)participeButtonTap:(id)sender {
+    [self configureUIBasedOnConnectivity];
+}
+
+- (IBAction)liveButtonTap:(id)sender {
+    [self configureUIBasedOnConnectivity];
+}
 
 #pragma mark -
 #pragma mark UIWebViewDelegate
@@ -168,6 +202,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self hideConnectToWifiView];
+    [self showConnectedView];
 }
 
 
@@ -182,9 +217,7 @@
 
     [self hideLoadingComponents];
     [self showConnectToWifiView];
-    [self retryFetchURLLater];
-
-
+    [self hideConnectedView];
 }
 
 

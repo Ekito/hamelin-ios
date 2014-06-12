@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -23,10 +23,13 @@
                                 <color key="textColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHX-da-NJJ">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHX-da-NJJ">
                                 <rect key="frame" x="0.0" y="131" width="320" height="437"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="u2d-ua-sTM"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="vZY-tV-PHR"/>
                                 </connections>
@@ -40,7 +43,40 @@ collective temps réel...</string>
                                 <color key="textColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d3t-wb-XGk" userLabel="Connect to wifi View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lN5-qj-e83" userLabel="Connected View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="top_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="p4e-j4-Cqm">
+                                        <rect key="frame" x="20" y="20" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hamelin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjU-qZ-17e">
+                                        <rect key="frame" x="108" y="34" width="192" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="46"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nog-aU-ZM6">
+                                        <rect key="frame" x="131" y="101" width="58" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Live">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="liveButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rmh-EH-bjx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="IyJ-J5-oWK"/>
+                                    <constraint firstAttribute="width" constant="320" id="UZ3-RJ-91H"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3t-wb-XGk" userLabel="Connect to wifi View">
                                 <rect key="frame" x="0.0" y="131" width="320" height="437"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -48,24 +84,17 @@ collective temps réel...</string>
                                         <rect key="frame" x="62" y="12" width="196" height="162"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connectez-vous au Wifi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZn-JU-aOW">
-                                        <rect key="frame" x="20" y="208" width="280" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pour prendre part à l'expérience musicale Hamelin, veuillez vous connecter au réseau" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="wZn-JU-aOW">
+                                        <rect key="frame" x="0.0" y="182" width="320" height="74"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdW-JU-Xu2">
-                                        <rect key="frame" x="20" y="242" width="280" height="38"/>
+                                        <rect key="frame" x="20" y="251" width="280" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Réseau : ">
-                                                <attributes>
-                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="23" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
                                             <fragment content="HAMELIN">
                                                 <attributes>
                                                     <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,26 +107,54 @@ collective temps réel...</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Gkb-j1-z8Q">
-                                        <rect key="frame" x="67" y="298" width="20" height="20"/>
+                                        <rect key="frame" x="71" y="298" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chargement…" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHT-83-LMW">
-                                        <rect key="frame" x="100" y="298" width="172" height="21"/>
+                                        <rect key="frame" x="99" y="297" width="172" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgC-0g-hzB">
+                                        <rect key="frame" x="91" y="293" width="138" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Je participe">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="participeButtonTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fBb-Mc-Otx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="1H1-WU-vCU"/>
+                                    <constraint firstAttribute="width" constant="320" id="2Ma-wX-Nvf"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d3t-wb-XGk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="1nM-nx-VHa"/>
+                            <constraint firstItem="d3t-wb-XGk" firstAttribute="top" secondItem="lN5-qj-e83" secondAttribute="bottom" id="8Hp-6v-8hH"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cHX-da-NJJ" secondAttribute="bottom" id="KSO-Wi-Vdt"/>
+                            <constraint firstItem="lN5-qj-e83" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="LGH-0O-MPe"/>
+                            <constraint firstItem="lN5-qj-e83" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NWL-51-tmr"/>
+                            <constraint firstItem="cHX-da-NJJ" firstAttribute="top" secondItem="lN5-qj-e83" secondAttribute="bottom" id="cCs-gO-h0F"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="d3t-wb-XGk" secondAttribute="bottom" id="jZ6-hh-R1x"/>
+                            <constraint firstItem="cHX-da-NJJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="jzY-Gy-yAP"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="connectToWifiView" destination="d3t-wb-XGk" id="MYf-Vi-NQr"/>
+                        <outlet property="connectedView" destination="lN5-qj-e83" id="5I3-3q-K6I"/>
+                        <outlet property="liveButton" destination="Nog-aU-ZM6" id="DUR-My-a3R"/>
                         <outlet property="loadingLabel" destination="uHT-83-LMW" id="X86-Dj-fUi"/>
                         <outlet property="loadingSpinningWheel" destination="Gkb-j1-z8Q" id="kGs-C3-GP0"/>
+                        <outlet property="participeButton" destination="FgC-0g-hzB" id="dlJ-hn-64u"/>
                         <outlet property="webView" destination="cHX-da-NJJ" id="CB1-bO-hZM"/>
                     </connections>
                 </viewController>
@@ -106,6 +163,7 @@ collective temps réel...</string>
         </scene>
     </scenes>
     <resources>
+        <image name="top_logo.png" width="140" height="140"/>
         <image name="wifi_symbol.png" width="300" height="237"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

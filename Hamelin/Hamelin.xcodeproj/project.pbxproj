@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B12E05F1953878900BA173B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B12E05E1953878900BA173B /* Images.xcassets */; };
 		3BD21E641949CAF000F7D8F2 /* top_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BD21E631949CAF000F7D8F2 /* top_logo.png */; };
 		A90417B618ED5A6800F3BD5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B518ED5A6800F3BD5B /* Foundation.framework */; };
 		A90417B818ED5A6800F3BD5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B718ED5A6800F3BD5B /* CoreGraphics.framework */; };
@@ -16,7 +17,6 @@
 		A90417C618ED5A6800F3BD5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A90417C518ED5A6800F3BD5B /* AppDelegate.m */; };
 		A90417C918ED5A6800F3BD5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A90417C718ED5A6800F3BD5B /* Main.storyboard */; };
 		A90417CC18ED5A6800F3BD5B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90417CB18ED5A6800F3BD5B /* ViewController.m */; };
-		A90417CE18ED5A6800F3BD5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A90417CD18ED5A6800F3BD5B /* Images.xcassets */; };
 		A90417D518ED5A6900F3BD5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417D418ED5A6900F3BD5B /* XCTest.framework */; };
 		A90417D618ED5A6900F3BD5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B518ED5A6800F3BD5B /* Foundation.framework */; };
 		A90417D718ED5A6900F3BD5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90417B918ED5A6800F3BD5B /* UIKit.framework */; };
@@ -40,6 +40,7 @@
 /* Begin PBXFileReference section */
 		0E5FF34F04A84BBEA2E93D41 /* libPods-Hamelin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hamelin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F6E4A5BA07458884A085AC /* Pods-Hamelin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hamelin.xcconfig"; path = "Pods/Pods-Hamelin.xcconfig"; sourceTree = "<group>"; };
+		3B12E05E1953878900BA173B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3BD21E631949CAF000F7D8F2 /* top_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_logo.png; sourceTree = "<group>"; };
 		A90417B218ED5A6800F3BD5B /* Hamelin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamelin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90417B518ED5A6800F3BD5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,7 +55,6 @@
 		A90417C818ED5A6800F3BD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A90417CA18ED5A6800F3BD5B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A90417CB18ED5A6800F3BD5B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A90417CD18ED5A6800F3BD5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A90417D318ED5A6900F3BD5B /* HamelinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HamelinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A90417D418ED5A6900F3BD5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A90417DC18ED5A6900F3BD5B /* HamelinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HamelinTests-Info.plist"; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				A90417C718ED5A6800F3BD5B /* Main.storyboard */,
 				A90417CA18ED5A6800F3BD5B /* ViewController.h */,
 				A90417CB18ED5A6800F3BD5B /* ViewController.m */,
-				A90417CD18ED5A6800F3BD5B /* Images.xcassets */,
+				3B12E05E1953878900BA173B /* Images.xcassets */,
 				A90417BC18ED5A6800F3BD5B /* Supporting Files */,
 			);
 			path = Hamelin;
@@ -257,9 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BD21E641949CAF000F7D8F2 /* top_logo.png in Resources */,
-				A90417CE18ED5A6800F3BD5B /* Images.xcassets in Resources */,
 				A90417C018ED5A6800F3BD5B /* InfoPlist.strings in Resources */,
 				A90417EE18ED62E100F3BD5B /* wifi_symbol@2x.png in Resources */,
+				3B12E05F1953878900BA173B /* Images.xcassets in Resources */,
 				A90417ED18ED62E100F3BD5B /* wifi_symbol.png in Resources */,
 				A90417C918ED5A6800F3BD5B /* Main.storyboard in Resources */,
 			);
@@ -400,6 +400,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				"VALID_ARCHS[sdk=*]" = "";
 			};
 			name = Debug;
 		};
@@ -432,6 +433,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "";
 			};
 			name = Release;
 		};
@@ -446,8 +448,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hamelin/Hamelin-Prefix.pch";
 				INFOPLIST_FILE = "Hamelin/Hamelin-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -463,8 +467,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hamelin/Hamelin-Prefix.pch";
 				INFOPLIST_FILE = "Hamelin/Hamelin-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1E5DA476-9C4A-4166-BA56-58524D9A520B";
+				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
